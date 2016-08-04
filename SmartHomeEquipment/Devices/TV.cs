@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SmartHomeEquipment
 {
-    public class TV : Device, IVolume, ITVChangeChannel, IOnOff
+    public class TV : Device, ITVChangeChannel, IOnOff
     {
         public TV(bool state, string name, TVChanneChangel tvChannel, Volume tvVolume)
             : base(state, name)

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SmartHomeEquipment
 {
-    public interface IdoorOpen
+    public interface IDoorOpen
     {
         void RefrigeratDoorOpen();
 

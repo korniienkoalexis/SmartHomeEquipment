@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SmartHomeEquipment
 {
-    public class Refrigerator : Device, IOnOff, IDeviceChangeMode, IdoorOpen, IFrostdoorOpen
+    public class Refrigerator : Device, IOnOff, IDeviceChangeMode, IDoorOpen, IFrostdoorOpen
     {
 
         private bool doorState;
@@ -14,10 +14,10 @@ namespace SmartHomeEquipment
         private bool ligthState;
         private ChangeFrostMode frostmode;
 
-        public Refrigerator(bool state, string name, ChangeFrostMode fros_tmode, bool doorState, bool frostDoorState)
+        public Refrigerator(bool state, string name, ChangeFrostMode frostMode, bool doorState, bool frostDoorState)
             : base(state, name)
         {
-            frostmode = fros_tmode;
+            frostmode = frostMode;
             this.doorState = doorState;
             this.frostDoorState = frostDoorState;
         }
@@ -45,7 +45,7 @@ namespace SmartHomeEquipment
             ligthState = false;
         }
 
-        public void frostDoorStateOpen()
+        public void FrostDoorStateOpen()
         {
             if (doorState == true)
             {
@@ -54,7 +54,7 @@ namespace SmartHomeEquipment
 
         }
 
-        public void frostDoorStateClose()
+        public void FrostDoorStateClose()
         {
             if (doorState == true)
             {

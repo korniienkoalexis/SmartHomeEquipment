@@ -8,8 +8,8 @@ namespace SmartHomeEquipment
 {
     public interface IFrostdoorOpen
     {
-        void frostDoorStateOpen();
+        void FrostDoorStateOpen();
 
-        void frostDoorStateClose();
+        void FrostDoorStateClose();
     }
 }

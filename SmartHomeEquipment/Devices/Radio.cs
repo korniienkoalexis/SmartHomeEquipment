@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SmartHomeEquipment
 {
-    public class Radio : Device, IVolume, IRadioChannel, IOnOff
+    public class Radio : Device, IRadioChannel, IOnOff
     {
         public Radio(bool state, string name, Volume radioVolume, RadioChannel radioChannel)
             : base(state, name)

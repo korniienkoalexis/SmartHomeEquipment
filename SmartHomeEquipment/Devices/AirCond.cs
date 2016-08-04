@@ -6,32 +6,32 @@ using System.Threading.Tasks;
 
 namespace SmartHomeEquipment
 {
-    public class AirCond : Device, IOnOff, ITemperature, IDeviceChangeMode
+    public class AirCond : Device, ITemperature, IDeviceChangeMode
     {
         public AirCond(bool state, string name, AirCondModeChng airmode, Temperature temperature)
             : base(state, name)
         {
-            aircond_mode = airmode;
-            aircond_temperature = temperature;
+            aircondmode = airmode;
+            aircondtemperature = temperature;
         }
-        private AirCondModeChng aircond_mode;
-        private Temperature aircond_temperature;
+        private AirCondModeChng aircondmode;
+        private Temperature aircondtemperature;
 
 
 
         public void UpTemperature()
         {
-            aircond_temperature.UpTemperature();
+            aircondtemperature.UpTemperature();
         }
 
         public void DownTemperature()
         {
-            aircond_temperature.DownTemperature();
+            aircondtemperature.DownTemperature();
         }
 
         public void ChangeMode()
         {
-            aircond_mode.ChangeMode();
+            aircondmode.ChangeMode();
         }
 
         public override string ToString()
@@ -46,8 +46,8 @@ namespace SmartHomeEquipment
             {
                 state = "OFF";
             }
-            int temperature = aircond_temperature.GetTemperature();
-            string mode = aircond_mode.GetAirCondMode();
+            int temperature = aircondtemperature.GetTemperature();
+            string mode = aircondmode.GetAirCondMode();
             return "AirConditioner name: " + name + " state: " + state + " Temperature: " + temperature + " Mode: " + mode;
         }
     }
