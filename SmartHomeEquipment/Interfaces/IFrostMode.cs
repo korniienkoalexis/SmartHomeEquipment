@@ -6,12 +6,8 @@ using System.Threading.Tasks;
 
 namespace SmartHomeEquipment
 {
-    public interface IFrostdoorOpen
+    public interface IFrostMode
     {
-        void FrostDoorStateOpen();
-
-        void FrostDoorStateClose();
-
-        bool FrostDoorState { get; }
+        void ChangeMode();
     }
 }

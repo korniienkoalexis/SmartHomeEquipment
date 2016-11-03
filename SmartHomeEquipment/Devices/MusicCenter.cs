@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SmartHomeEquipment
 {
-    public class MusicCenter : Device, IDeviceChangeMode, IOnOff
+    public class MusicCenter : Device, IDeviceChangeMode, IVolume , IMusicCenterMode , IRadioChannel , IChangeCD
     {
 
         public MusicCenter(bool state, string name, Volume musicVolume, RadioChannel radioChannel, ChangeCD cd, MusicMode musicmode)

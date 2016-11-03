@@ -21,7 +21,7 @@ namespace SmartHomeEquipment
             {
                 numCD = 1;
             }
-            numCD = 0;
+            //numCD = 0;
         }
 
         public int GetCD()

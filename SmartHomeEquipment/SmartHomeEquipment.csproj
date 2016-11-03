@@ -54,8 +54,10 @@
     <Compile Include="Enum\MusicCenterMode.cs" />
     <Compile Include="Classes\MusicMode.cs" />
     <Compile Include="Classes\RadioChannel.cs" />
+    <Compile Include="Interfaces\IChangeCD.cs" />
     <Compile Include="Interfaces\IdoorOpen.cs" />
     <Compile Include="Interfaces\IFrostdoorOpen.cs" />
+    <Compile Include="Interfaces\IFrostMode.cs" />
     <Compile Include="Interfaces\IMusicCenterMode.cs" />
     <Compile Include="Interfaces\IDeviceChangeMode.cs" />
     <Compile Include="Interfaces\IOnOff.cs" />

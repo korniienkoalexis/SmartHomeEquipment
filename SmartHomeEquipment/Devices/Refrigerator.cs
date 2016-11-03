@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SmartHomeEquipment
 {
-    public class Refrigerator : Device, IOnOff, IDeviceChangeMode, IDoorOpen, IFrostdoorOpen
+    public class Refrigerator : Device, IDoorOpen, IFrostdoorOpen, IFrostMode
     {
 
         private bool doorState;
@@ -45,6 +45,12 @@ namespace SmartHomeEquipment
             ligthState = false;
         }
 
+        public void GetRefrigeratDoorOpen()
+        {
+            doorState = true;
+            //ligthState = false;
+        }
+
         public void FrostDoorStateOpen()
         {
             if (doorState == true)
@@ -59,6 +65,22 @@ namespace SmartHomeEquipment
             if (doorState == true)
             {
                 frostDoorState = false;
+            }
+        }
+
+        public bool DoorState
+        {
+            get
+            {
+                return doorState;
+            }
+        }
+
+        public bool FrostDoorState
+        {
+            get
+            {
+                return frostDoorState;
             }
         }
 

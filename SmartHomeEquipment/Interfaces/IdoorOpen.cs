@@ -11,5 +11,9 @@ namespace SmartHomeEquipment
         void RefrigeratDoorOpen();
 
         void RefrigeratDoorClose();
+
+        void GetRefrigeratDoorOpen();
+
+         bool DoorState { get;}
     }
 }

@@ -11,10 +11,12 @@ namespace SmartHomeEquipment
         //public.public bool state;
         //public string name;
 
+        //public int id { get; set; }
         public string name { get; set; }
         public bool state { get; set; }
         public Device(bool state, string name)
         {
+            //this.id = id;
             this.state = state;
             this.name = name;
         }
